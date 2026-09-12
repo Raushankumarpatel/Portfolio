@@ -312,6 +312,7 @@ export function Hero({ onOpenResume }) {
           background: rgba(15, 23, 42, 0.7);
           border: 1px solid rgba(255, 255, 255, 0.1);
           max-width: 580px;
+          width: 100%;
         }
 
         .stat-item {
@@ -343,12 +344,16 @@ export function Hero({ onOpenResume }) {
           position: relative;
           display: flex;
           justify-content: center;
+          width: 100%;
+          max-width: 100%;
         }
 
         .avatar-glow-ring {
           position: absolute;
           width: 380px;
           height: 380px;
+          max-width: 85vw;
+          max-height: 85vw;
           border-radius: 50%;
           background: linear-gradient(135deg, rgba(236, 72, 153, 0.4), var(--primary-cyan), var(--primary-violet));
           opacity: 0.4;
@@ -360,6 +365,8 @@ export function Hero({ onOpenResume }) {
           position: absolute;
           width: 420px;
           height: 420px;
+          max-width: 92vw;
+          max-height: 92vw;
           border-radius: 50%;
           border: 2px dashed rgba(6, 182, 212, 0.25);
           animation: spinOrbit 25s linear infinite;
@@ -367,6 +374,7 @@ export function Hero({ onOpenResume }) {
 
         .avatar-glass-frame {
           width: 340px;
+          max-width: calc(100vw - 2.5rem);
           height: 370px;
           border-radius: 28px;
           padding: 10px;
@@ -455,9 +463,10 @@ export function Hero({ onOpenResume }) {
           .hero-container {
             grid-template-columns: 1fr;
             text-align: center;
+            gap: 2.5rem;
           }
           .hero-heading {
-            font-size: 2.8rem;
+            font-size: 2.6rem;
           }
           .role-typer-wrapper, .hero-subtitle, .hero-location-info, .hero-actions, .hero-socials, .hero-stats-bar {
             justify-content: center;
@@ -465,10 +474,56 @@ export function Hero({ onOpenResume }) {
             margin-right: auto;
           }
           .hero-visual {
-            margin-top: 2.5rem;
+            margin-top: 2rem;
+          }
+          .badge-top-left {
+            top: -15px;
+            left: 0px;
+          }
+          .badge-bottom-right {
+            bottom: -15px;
+            right: 0px;
           }
           .badge-top-right, .badge-bottom-left {
             display: none;
+          }
+        }
+
+        @media (max-width: 550px) {
+          .hero-section {
+            padding: 6rem 0 3rem;
+          }
+          .hero-heading {
+            font-size: 2rem;
+          }
+          .role-typer-wrapper {
+            font-size: 1.15rem;
+            min-height: 2rem;
+          }
+          .hero-stats-bar {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            padding: 1rem;
+          }
+          .stat-divider {
+            display: none;
+          }
+          .stat-item {
+            align-items: center;
+            text-align: center;
+          }
+          .avatar-glass-frame {
+            height: 310px;
+          }
+          .floating-badge {
+            padding: 0.45rem 0.75rem;
+          }
+          .badge-value {
+            font-size: 0.85rem;
+          }
+          .badge-label {
+            font-size: 0.68rem;
           }
         }
       `}</style>

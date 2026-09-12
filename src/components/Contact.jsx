@@ -346,6 +346,8 @@ export function Contact() {
           font-size: 0.95rem;
           font-weight: 600;
           color: var(--text-main);
+          word-break: break-all;
+          overflow-wrap: anywhere;
         }
 
         /* Form Styling */
@@ -437,6 +439,16 @@ export function Contact() {
           }
           .form-row {
             grid-template-columns: 1fr;
+          }
+        }
+
+        @media (max-width: 550px) {
+          .contact-info-card, .contact-form-card {
+            padding: 1.25rem;
+          }
+          .contact-detail-item {
+            padding: 0.75rem;
+            gap: 0.75rem;
           }
         }
       `}</style>

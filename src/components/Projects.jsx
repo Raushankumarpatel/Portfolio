@@ -181,8 +181,8 @@ export function Projects() {
 
         .projects-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-          gap: 2.5rem;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 2rem;
         }
 
         .project-card {
@@ -430,6 +430,17 @@ export function Projects() {
         @media (max-width: 600px) {
           .projects-grid {
             grid-template-columns: 1fr;
+          }
+          .modal-backdrop {
+            padding: 0.75rem;
+          }
+          .modal-body {
+            padding: 1.25rem;
+          }
+          .modal-meta-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.75rem;
           }
         }
       `}</style>

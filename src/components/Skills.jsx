@@ -197,6 +197,23 @@ export function Skills() {
             padding: 1.75rem;
           }
         }
+
+        @media (max-width: 550px) {
+          .skills-card-container {
+            padding: 1.15rem;
+          }
+          .skills-tabs-row {
+            gap: 0.5rem;
+          }
+          .skills-tab-btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+          }
+          .category-title {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+          }
+        }
       `}</style>
     </section>
   );

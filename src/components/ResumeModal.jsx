@@ -370,6 +370,30 @@ export function ResumeModal({ isOpen, onClose }) {
           font-size: 0.88rem;
         }
 
+        @media (max-width: 600px) {
+          .resume-backdrop {
+            padding: 0.5rem;
+          }
+          .resume-controls-bar {
+            padding: 0.8rem 1rem;
+          }
+          .control-title {
+            font-size: 0.9rem;
+          }
+          .resume-document {
+            padding: 1.25rem;
+          }
+          .resume-item-row {
+            flex-direction: column;
+            gap: 0.2rem;
+          }
+          .resume-contact-grid {
+            gap: 0.6rem;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+
         @media print {
           body * {
             visibility: hidden;

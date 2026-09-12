@@ -257,6 +257,19 @@ export function About() {
             grid-template-columns: 1fr;
           }
         }
+
+        @media (max-width: 550px) {
+          .education-card, .fundamentals-card {
+            padding: 1.25rem;
+          }
+          .fundamental-item {
+            padding: 0.85rem;
+            gap: 0.8rem;
+          }
+          .card-top-icon {
+            margin-bottom: 1rem;
+          }
+        }
       `}</style>
     </section>
   );
